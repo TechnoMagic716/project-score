@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
   }
-  /*navbar*/
+  
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -13,7 +13,7 @@ body {
   
   .logo {
     color: white;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
   }
   
@@ -21,20 +21,51 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
+    position: relative;
   }
   
   .nav-links li {
-    display: inline;
+    position: relative;
   }
   
   .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    padding: 5px 10px;
   }
   
   .nav-links a:hover {
     text-decoration: underline;
+  }
+  
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .sub-menu li {
+    padding: 5px 20px;
+  }
+  
+  .sub-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .sub-menu a:hover {
+    background-color: #555;
+  }
+  
+  .nav-links li:hover .sub-menu {
+    display: block;
   }
   
   .hamburger {
@@ -69,5 +100,12 @@ body {
   
     .hamburger {
       display: flex;
+    }
+  
+    .sub-menu {
+      position: relative;
+      top: 0;
+      left: 0;
+      background-color: #444;
     }
   }
